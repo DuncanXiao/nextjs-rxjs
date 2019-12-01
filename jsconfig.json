@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noLib": false,
+    "target": "esnext",
+    "jsx": "react",
+    "checkJs": false,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["client/*"]
+    }
+  },
+  "include": ["client/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "src/client/dist",
+    "bower_components",
+    "tmp",
+    "temp",
+    "jspm_packages"
+  ]
+}

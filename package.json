@@ -1,0 +1,23 @@
+{
+  "name": "nextjs-rxjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./src/server",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "bowser": "^2.7.0",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.15",
+    "next": "9.1.4",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4"
+  }
+}

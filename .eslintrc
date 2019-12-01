@@ -1,0 +1,29 @@
+{
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "standard",
+    "standard-jsx"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-unused-vars": "warn",
+    "prefer-const": "error",
+    "max-len": ["error", { "code": 180 }]
+  },
+  "globals": {
+    "FB": true,
+    "window": true
+  }
+}
