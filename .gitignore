@@ -9,7 +9,7 @@
 /coverage
 
 # next.js
-src/clinet/.next/
+src/client/.next/
 /out/
 
 # production

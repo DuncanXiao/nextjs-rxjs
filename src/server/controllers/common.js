@@ -6,8 +6,9 @@ const nextHandle = (app) => {
   })
 }
 
-const defaultHandle = (path) => async ctx => {
-  await app.render(ctx.req, ctx.res, path, ctx.query)
+const defaultHandle = (app) => async (ctx) => {
+  const { req, res, path, query } = ctx
+  await app.render(req, res, path, query)
   ctx.respond = false
 }
 

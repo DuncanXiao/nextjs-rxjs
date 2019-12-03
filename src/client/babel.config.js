@@ -12,11 +12,10 @@ module.exports = {
     ],
     'jsx-control-statements',
     ['module-resolver', {
-      'cwd': 'babelrc',
-      'root': [`${__dirname}/src/client`],
+      'root': [__dirname],
       'extensions': ['.js', '.jsx'],
       'alias': {
-        '@': `${__dirname}/src/client`
+        '@': __dirname
       }
     }]
   ]

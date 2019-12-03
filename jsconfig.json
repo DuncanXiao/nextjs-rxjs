@@ -12,7 +12,7 @@
       "@/*": ["client/*"]
     }
   },
-  "include": ["client/**/*"],
+  "include": ["./src/client/**/*"],
   "exclude": [
     "node_modules",
     "**/node_modules/*",
