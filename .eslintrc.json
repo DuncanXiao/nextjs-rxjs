@@ -24,6 +24,7 @@
   },
   "globals": {
     "FB": true,
-    "window": true
+    "window": true,
+    "React": true
   }
 }

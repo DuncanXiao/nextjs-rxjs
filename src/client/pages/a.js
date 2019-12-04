@@ -1,17 +1,15 @@
-import Nav from '@/components/nav'
+import Layout from '@/containers/a/Layout.jsx'
 
 class APage extends React.Component {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     const { req: { toolkit } } = ctx
-    console.log('sss', Object.keys(ctx))
-    console.log('aa', toolkit.isMobile())
     return {}
   }
 
   render () {
     return (<div>
       <p>a</p>
-      <Nav></Nav>
+      <Layout />
     </div>
     )
   }
