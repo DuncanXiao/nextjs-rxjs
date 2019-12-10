@@ -10,6 +10,7 @@
   "dependencies": {
     "bowser": "^2.7.0",
     "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
     "koa": "^2.11.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.15",
