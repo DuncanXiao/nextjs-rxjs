@@ -84,7 +84,8 @@ const Home = () => (
         font-size: 13px;
         color: #333;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 

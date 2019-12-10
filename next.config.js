@@ -1,5 +1,9 @@
+const { env, serverRuntimeConfig, publicRuntimeConfig } = require('./share/env')
+
 module.exports = {
-  dir: './src/clinet',
+  env,
+  serverRuntimeConfig,
+  publicRuntimeConfig,
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {

@@ -1,14 +1,19 @@
 const Koa = require('koa')
 const next = require('next')
-const path = require('path')
 const initRouter = require('./routers')
+const {
+  serverRuntimeConfig: {
+    port, nextDir
+  }, publicRuntimeConfig: {
+    isDev
+  }
+} = require('../../share/env')
 
-const port = parseInt(process.env.PORT, 10) || 3000
-const dev = process.env.NODE_ENV !== 'production'
 const app = next({
-  dev,
-  dir: path.resolve(__dirname, '../client')
+  dev: isDev,
+  dir: nextDir
 })
+
 app.prepare().then(() => {
   const server = new Koa()
   const router = initRouter({ app })

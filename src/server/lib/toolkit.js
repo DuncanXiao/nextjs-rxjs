@@ -33,7 +33,7 @@ class ToolkitService {
   constructor (req) {
     this.supportedLocales = ['es-us', 'en-us']
     this.req = req
-    this.ua = get(this.req, `headers['user-agent']`, '')
+    this.ua = get(this.req, 'headers[\'user-agent\']', '')
     this.browser = null
     this.cookies = this.parseCookies()
   }
