@@ -20,7 +20,8 @@
   "rules": {
     "no-unused-vars": "warn",
     "prefer-const": "error",
-    "max-len": ["error", { "code": 180 }]
+    "max-len": ["error", { "code": 180 }],
+    "react/jsx-handler-names": "off"
   },
   "globals": {
     "FB": true,
