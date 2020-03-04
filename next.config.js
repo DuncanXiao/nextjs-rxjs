@@ -1,6 +1,5 @@
 const { env, serverRuntimeConfig, publicRuntimeConfig } = require('./share/env')
 const withTM = require('next-transpile-modules')
-const withCSS = require('@zeit/next-css')
 const withPlugins = require('next-compose-plugins')
 
 module.exports = withPlugins(
