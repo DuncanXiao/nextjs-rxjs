@@ -1,12 +1,6 @@
 import MasonryExample from '@/components/MasonryExample'
 import { connect } from 'react-redux'
-import css from 'styled-jsx/css'
 import { addCountAction } from '@/ducks/home/addCount'
-
-const { className, styles } = css.resolve`
-  .container { background: green }
-  .haha { background: red }
-`
 
 class Layout extends React.Component {
   handleClick = () => {
@@ -16,10 +10,15 @@ class Layout extends React.Component {
 
   render () {
     return (
-      <div className={`${className} container`}>
-        <div className={`${className} haha`} onClick={this.handleClick}>{this.props.count}</div>
+      <div className='container'>
+        <div className='haha' onClick={this.handleClick}>{this.props.count}</div>
         <MasonryExample />
-        {styles}
+        <style jsx>
+          {`
+            .container { background: green }
+            .haha { background: red }
+          `}
+        </style>
       </div>
     )
   }
@@ -35,5 +34,5 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = dispatch => ({
   addCountAction: data => dispatch(addCountAction(data))
-});
+})
 export default connect(mapStateToProps, mapDispatchToProps)(Layout)
