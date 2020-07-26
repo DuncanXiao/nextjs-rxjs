@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import App from 'next/app'
 import withRedux from 'next-redux-wrapper'
 import makeStore from '@/lib/store'
+import Head from 'next/head'
 
 class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {
@@ -16,9 +17,14 @@ class MyApp extends App {
   render () {
     const { Component, pageProps, store } = this.props
     return (
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <div>
+        <Head>
+          <link href='/static/css/base.css' rel='stylesheet' />
+        </Head>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </div>
     )
   }
 }

@@ -1,14 +1,6 @@
 import Masonry from 'react-masonry-component'
 import debounce from 'lodash/debounce'
 import { isScrollBottom } from '@/helpers/scroll'
-import css from 'styled-jsx/css'
-
-const { className, styles } = css.resolve`
-  .custon-image {
-    width: 300px;
-    // margin-top:10px;
-  }
-`
 
 class MasonryExample extends React.Component {
   state = {
@@ -48,7 +40,7 @@ class MasonryExample extends React.Component {
           {
             images.map((i, k) => (
               <img
-                className={`${className} custon-image`}
+                className='custon-image'
                 key={k}
                 src={`/static/messi${i}.jpg`}
                 offset={1}
@@ -56,7 +48,14 @@ class MasonryExample extends React.Component {
             ))
           }
         </Masonry>
-        {styles}
+        <style jsx>
+          {`
+             .custon-image {
+              width: 300px;
+              // margin-top:10px;
+            }
+          `}
+        </style>
       </div>
     )
   }
