@@ -1,0 +1,14 @@
+node_modules
+*/tmp*
+.tmp
+tmp
+log/*
+/log/*
+.tmp/*
+/tmp
+.idea
+.git
+
+.byebug_history
+.env
+yarn.lock

@@ -4,18 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./src/server",
-    "build": "next build ./src/client",
+    "build": "./node_modules/.bin/next build ./src/client",
     "start": "cross-env NODE_ENV=production nodemon ./src/server"
   },
   "dependencies": {
     "bowser": "^2.7.0",
+    "cookie": "^0.4.1",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
     "draft-js": "^0.11.3",
     "koa": "^2.11.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.15",
-    "next": "9.4.5",
+    "next": "9.5.3",
     "next-compose-plugins": "^2.2.0",
     "next-redux-wrapper": "^4.0.1",
     "next-transpile-modules": "^2.3.1",
